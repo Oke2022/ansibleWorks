@@ -1,0 +1,10 @@
+---
+- name: Deploy web app on all servers
+  hosts: all
+  become: true
+  tasks:
+    - name: Update maintainance
+      copy:
+        src: maintainance.html
+        dest: /var/www/html/index.html
+...
