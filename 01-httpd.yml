@@ -1,6 +1,6 @@
 ---
 - name: Install httpd on all servers
-  hosts: server1
+  hosts: all
   become: true
   tasks:
     - name: Install HTTPD
@@ -9,12 +9,12 @@
         state: present
 
     - name: Start the service
-      yum:
+      service:
         name: httpd
         state: started
 
     - name: Start the service
-      yum:
+      service:
         name: httpd
         enabled: yes
 ...
