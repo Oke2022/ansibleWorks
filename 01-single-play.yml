@@ -1,0 +1,19 @@
+---
+- name: Update all servers
+  hosts: server1
+  become: true
+  tasks:
+    - name: Create a directory
+      file:
+        path: /home/ec2-user/test_dir
+        state: directory
+
+  name: Update all servers
+  hosts: server2
+  become: true
+  tasks:
+    - name: Create a directory
+      file:
+        path: /home/fedora/test_dir
+        state: directory
+...
