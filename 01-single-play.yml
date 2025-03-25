@@ -8,7 +8,7 @@
         path: /home/ec2-user/test_dir
         state: directory
 
-  name: Update all servers
+- name: Update all servers
   hosts: server2
   become: true
   tasks:
