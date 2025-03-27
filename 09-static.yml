@@ -1,10 +1,10 @@
 ---
 - name: Deploy web app on all servers
-  hosts: all
+  hosts: server1
   become: true
   tasks:
     - name: Update static page
       copy:
-        src: static.html
+        src: static-page.html
         dest: /var/www/html/static.html
 ...
