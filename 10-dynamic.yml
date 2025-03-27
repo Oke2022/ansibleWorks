@@ -6,5 +6,5 @@
     - name: Update dynamic
       template:
         src: dynamic-page.j2
-        dest: /var/www/html/dynamic-page.html
+        dest: /var/www/html/dynamic.html
 ...
