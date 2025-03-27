@@ -1,0 +1,9 @@
+---
+- name: Deploy web app on all servers
+  hosts: server3
+  become: true
+  
+  roles: 
+    - apache
+    - angular
+...
