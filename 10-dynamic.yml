@@ -1,0 +1,10 @@
+---
+- name: Deploy web app on all servers
+  hosts: all
+  become: true
+  tasks:
+    - name: Update dynamic
+      template:
+        src: dynamic-page.j2
+        dest: /var/www/html/dynamic-page.html
+...
