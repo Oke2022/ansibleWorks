@@ -1,87 +1,38 @@
-# AnsibleWorks
+Role Name
+=========
 
-## Overview
-AnsibleWorks is a collection of Ansible playbooks and roles designed for automating server configurations, deployments, and system administration tasks. This project provides a structured approach to managing infrastructure using Ansible, simplifying repetitive tasks and ensuring consistency across multiple environments.
+A brief description of the role goes here.
 
-## Features
-- Automated server provisioning and configuration
-- Role-based architecture for modular playbooks
-- Support for various Linux distributions
-- Integration with SSH for agentless automation
-- Easy customization and scalability
+Requirements
+------------
 
-## Prerequisites
-Before using this project, ensure you have the following installed:
-- **Ansible** (Latest version recommended)
-- **Python 3**
-- **SSH Access** to the target machines
-- **Git** (Optional, for cloning the repository)
+Any pre-requisites that may not be covered by Ansible itself or the role should be mentioned here. For instance, if the role uses the EC2 module, it may be a good idea to mention in this section that the boto package is required.
 
-## Installation
-Clone the repository:
-```sh
- git clone https://github.com/Oke2022/ansibleWorks.git
- cd ansibleWorks
-```
+Role Variables
+--------------
 
-## Usage
-### 1. Update Inventory
-Modify the `inventory` file to include the target servers:
-```ini
-[webservers]
-server_name ansible_host=server_ip ansible_user=server_username ansible_ssh_private_key_file=path_to_your_server_pivate_key ansible_ssh_common_args='-o StrictHostKeyChecking=no'
-server_name ansible_host=server_ip ansible_user=server_username ansible_ssh_private_key_file=path_to_your_server_pivate_key ansible_ssh_common_args='-o StrictHostKeyChecking=no'
+A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
 
-server1.example.com
-server2.example.com
+Dependencies
+------------
 
-[dbservers]
-db1.example.com
-```
+A list of other roles hosted on Galaxy should go here, plus any details in regards to parameters that may need to be set for other roles, or variables that are used from other roles.
 
-### 2. Run a Playbook
-To run a playbook, use the following command:
-```sh
-ansible-playbook -i host.ini specific_yml_file.yml
-```
+Example Playbook
+----------------
 
-### 3. Create a New Role
-To create a new Ansible role:
-```sh
-ansible-galaxy init roles/new_role
-```
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
-### 4. Test Connectivity
-To verify Ansible can connect to all hosts:
-```sh
-ansible -i inventory all -m ping
-```
+    - hosts: servers
+      roles:
+         - { role: username.rolename, x: 42 }
 
-## Project Structure
-```
-ansibleWorks/
+License
+-------
 
-├── roles/            # Directory for Ansible roles
-│   ├── angular/       # Example role for angular setup
-│   ├── apache/        # Example role for apache setup
-|   ├── html/        # Example role for html setup
-│   ├── php/         # Example role for php setup
-├── playbooks/        # Additional playbooks
-├── site.yml          # Main Ansible playbook
-├── site.yml          # Main Ansible playbook
-|── site.html          # Main sites
-├── inventory         # Inventory file for target hosts
-└── README.md         # Project documentation
-```
+BSD
 
-## Contributing
-Contributions are welcome! Feel free to fork the repository and submit pull requests with improvements, bug fixes, or new features.
+Author Information
+------------------
 
-## License
-This project is licensed under the MIT License.
-
-## Author
-**Oke Joshua**
-
-For any questions or inquiries, contact me via [GitHub](https://github.com/Oke2022).
-
+An optional section for the role authors to include contact information, or a website (HTML is not allowed).
