@@ -1,6 +1,6 @@
 ---
 - name: Install httpd on all servers
-  hosts: all
+  hosts: server3
   become: true
   tasks:
     - name: Install Apache2
